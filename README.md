@@ -1,4 +1,4 @@
-# Spring-Hibernate-Project
+# Spring-Project
 Spring 5: Spring 5 Core, AOP, Spring MVC, Spring Security, Spring REST, Spring Boot 2, Thymeleaf, JPA &amp; Hibernate
 
 ## Spring 5 Core:
