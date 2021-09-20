@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://$MODULE_DIR$/lib/spring-aop-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-aop-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-aop-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-aspects-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-aspects-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-aspects-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-beans-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-beans-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-beans-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-context-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-context-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-context-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-context-indexer-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-context-indexer-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-context-indexer-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-context-support-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-context-support-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-context-support-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-core-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-core-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-core-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-expression-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-expression-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-expression-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-instrument-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-instrument-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-instrument-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-jcl-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-jcl-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-jcl-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-jdbc-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-jdbc-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-jdbc-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-jms-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-jms-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-jms-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-messaging-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-messaging-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-messaging-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-orm-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-orm-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-orm-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-oxm-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-oxm-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-oxm-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-r2dbc-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-r2dbc-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-r2dbc-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-test-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-test-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-test-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-tx-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-tx-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-tx-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-web-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-web-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-web-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-webflux-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-webflux-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-webflux-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-webmvc-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-webmvc-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-webmvc-5.3.9-sources.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-websocket-5.3.9.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-websocket-5.3.9-javadoc.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring-websocket-5.3.9-sources.jar!/" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/applicationContext.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="JavaSE-16" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="spring-aop-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-aop-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-aop-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-aop-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-aop-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-aop-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-aspects-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-aspects-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-aspects-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-aspects-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-aspects-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-aspects-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-beans-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-beans-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-beans-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-beans-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-beans-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-beans-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-context-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-context-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-context-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-context-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-context-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-context-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-context-indexer-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-context-indexer-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-context-indexer-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-context-indexer-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-context-indexer-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-context-indexer-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-context-support-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-context-support-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-context-support-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-context-support-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-context-support-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-context-support-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-core-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-core-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-core-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-core-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-core-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-core-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-expression-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-expression-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-expression-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-expression-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-expression-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-expression-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-instrument-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-instrument-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-instrument-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-instrument-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-instrument-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-instrument-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-jcl-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-jcl-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-jcl-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-jcl-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-jcl-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-jcl-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-jdbc-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-jdbc-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-jdbc-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-jdbc-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-jdbc-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-jdbc-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-jms-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-jms-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-jms-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-jms-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-jms-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-jms-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-messaging-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-messaging-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-messaging-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-messaging-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-messaging-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-messaging-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-orm-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-orm-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-orm-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-orm-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-orm-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-orm-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-oxm-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-oxm-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-oxm-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-oxm-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-oxm-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-oxm-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-r2dbc-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-r2dbc-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-r2dbc-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-r2dbc-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-r2dbc-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-r2dbc-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-test-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-test-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-test-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-test-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-test-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-test-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-tx-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-tx-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-tx-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-tx-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-tx-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-tx-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-web-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-web-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-web-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-web-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-web-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-web-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-webflux-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-webflux-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-webflux-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-webflux-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-webflux-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-webflux-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-webmvc-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-webmvc-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-webmvc-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-webmvc-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-webmvc-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-webmvc-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-websocket-5.3.9.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-websocket-5.3.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-websocket-5.3.9-javadoc.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-websocket-5.3.9-javadoc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spring-websocket-5.3.9-sources.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring-websocket-5.3.9-sources.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
