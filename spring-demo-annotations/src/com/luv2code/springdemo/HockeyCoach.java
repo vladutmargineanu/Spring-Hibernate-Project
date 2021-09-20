@@ -4,21 +4,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component("thatSillyCoach")
-public class TennisCoach implements Coach {
+@Component
+public class HockeyCoach implements Coach {
 	
+	// field injection - without any setter or method
+	@Autowired
+	@Qualifier("randomFortuneService")		// qualifier for dependency injection DI
 	private FortuneService fortuneService;
 	
-	// constructor injection
-	// qualifier for dependency injection DI for multiple implementations of an interface
-	@Autowired
-	public TennisCoach(@Qualifier("happyFortuneService") FortuneService theFortuneService) {
-		fortuneService = theFortuneService;
+	// define default constructor
+	public HockeyCoach() {
+		System.out.println(">> HockeyCoach: inside default constructor");
 	}
 
 	@Override
 	public String getDailyWorkout() {
-		return "Practice tennis";
+		return "Practice hockey";
 	}
 
 	@Override
