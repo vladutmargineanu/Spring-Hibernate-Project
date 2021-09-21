@@ -158,8 +158,9 @@
 	
 	
 	Now to the main code based on your question.
-	
+```java
 	return new SwimCoach(sadFortuneService())
+```
 	This code creates an instance of SwimCoach. Note the call to the method 
 	sadFortuneService(). We are calling the annotated method above. The @Bean will 
 	intercept and return a singleton instance of sadFortuneService. 
@@ -173,7 +174,7 @@
 	---
 	
 	This concludes the line-by-line discussion of the source code. All of the
-	 behind the scenes work.
+	behind the scenes work.
 	
 	I hope this clears your doubt. :-)
 	
