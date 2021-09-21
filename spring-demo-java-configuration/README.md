@@ -1,26 +1,26 @@
-	---
-	FAQ: How @Bean works behind the scenes
-	---
-	Question:
 	
-	During All Java Configuration, how does the @Bean annotation work in the background?
+	# FAQ: How @Bean works behind the scenes
+	
+	## Question:
+	
+	### During All Java Configuration, how does the @Bean annotation work in the background?
 	
 	---
 	
-	Answer
+	> Answer
 	
 	This is an advanced concept. But I'll walk through the code line-by-line.
 	
 	For this code:
 	
-	---
+	```
 	
 	  @Bean 
 	  public Coach swimCoach() {   
 	   SwimCoach mySwimCoach = new SwimCoach();   
 	   return mySwimCoach; 
 	  }
-	  ---
+	  ```
 	  
 	  
 	At a high-level, Spring creates a bean component manually. By default the scope 
@@ -31,11 +31,8 @@
 	---
 	However, let's break it down line-by-line
 	
-	---
 	
-	@Bean
-	
-	---
+	```@Bean ```
 	
 	The @Bean annotation tells Spring that we are creating a bean component 
 	manually. We didn't specify a scope so the default scope is singleton.
@@ -50,20 +47,14 @@
 	Since we didn't specify a scope, the bean scope is singleton. As a result, 
 	it will give the same instance of the bean for any requests.
 	
-	
-	---
-	
+	```
 	 SwimCoach mySwimCoach = new SwimCoach();
+	 ```
 	 
-	---
 	This code will create a new instance of the SwimCoach.
-	
-	
-	---
-	
+	```
 	 return mySwimCoach;
-	 
-	---
+	 ```
 	
 	This code returns an instance of the swimCoach.
 	
@@ -72,16 +63,14 @@
 	
 	Now let's step back and look at the method in it's entirety.
 	
-	---
-	
+```	
 	 @Bean 
 	 public Coach swimCoach() {   
 	   SwimCoach mySwimCoach = new SwimCoach();   
 	   return mySwimCoach; 
 	 }
 	
-	---
-	
+```	
 	It is important to note that this method has the @Bean annotation. The annotation 
 	will intercept ALL calls to the method "swimCoach()". Since no scope is 
 	specified the @Bean annotation uses singleton scope. Behind the scenes, 
@@ -101,13 +90,11 @@
 	
 	The code for
 	
-	---
-	
+```	
 	 SwimCoach mySwimCoach = new SwimCoach(); 
 	 return mySwimCoach;
 	 
-	---
-	
+```	
 	is not executed for subsequent requests to the method public Coach swimCoach() . 
 	This code is only executed once during the initial bean creation since it is 
 	singleton scope.
@@ -131,8 +118,7 @@
 	
 	In this example, we are creating a SwimCoach and injecting the sadFortuneService().
 	
-	---
-	
+```	
 	         // define bean for our sad fortune service
 	        @Bean
 	        public FortuneService sadFortuneService() {
@@ -147,19 +133,17 @@
 	            return mySwimCoach;
 	        }
 	
-	---
-	
+```	
 	Using the same information presented earlier
 	
 	The code
-	---
-	        // define bean for our sad fortune service
+```	        
+		// define bean for our sad fortune service
 	        @Bean
 	        public FortuneService sadFortuneService() {
 	            return new SadFortuneService();
 	        }
-	---
-	
+```	
 	In the code above, we define a bean for the sad fortune service. Since the bean
 	 scope is not specified, it defaults to singleton.
 	
