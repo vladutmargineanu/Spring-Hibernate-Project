@@ -1,14 +1,13 @@
- ---
- FAQ: What is a real-time use case for @Bean?
- ---
+ 
+# FAQ: What is a real-time use case for @Bean?
 
- Here is a real-time use case of using @Bean: You can use @Bean to make an existing
- third-party class available to your Spring framework application context.
+## Here is a real-time use case of using @Bean: You can use @Bean to make an existing
+## third-party class available to your Spring framework application context.
 
  For example, I was recently working on a global real-time project using Amazon Web Services.
  The project made use of the Amazon Simple Storage Service (AWS S3). This is remote service that
  provides object storage in the cloud. You can think of AWS S3 at a high-level as a remote
-  file server for storing files (pdfs, pngs etc).
+ file server for storing files (pdfs, pngs etc).
 
  Our Spring application needed to integrate with AWS S3 and store pdf documents. Amazon
  provides an AWS SDK for integrating with AWS S3. Their API provides a class, S3Client.
@@ -29,17 +28,14 @@
  You want to make the third-party classes available to your Spring framework
  application context.
 
- ---
- Here's a real-time example
- ---
+## Here's a real-time example
 
  Here is a snippet from our @Configuration class. We create an instance of the 
  S3Client and wrap it as a Spring bean. The default scope is singleton. It is now 
  available in our application context and we can inject it to other parts of our 
  Spring application using @Autowired.
  
- --- 
- 
+```java 
   @Bean
     public S3Client remoteClient() {
         
@@ -50,7 +46,7 @@
             return s3Client;    
     }
     
- ---
+ ```
  
  In the code below, this is a Spring service that uses the S3Client. The service 
  @Service annotation is a subclass of @Component. This code uses @Autowired to 
@@ -61,7 +57,7 @@
  S3 service. In this real-time project, we were processing insurance claims. 
  We store the PDF invoices in the cloud using the AWS S3 service.
  
- ---
+ ```java
  
  @Service
     public class InsuranceClaimsServiceImpl implements ClaimsService {
@@ -97,7 +93,7 @@
         }
     }
     
- ---
+ ```
  
  As you can see, I was able to wrap a third-party class as a Spring bean. The 
  AWS S3Client object was not originally annotated with @Component. The S3Client 
@@ -113,8 +109,8 @@
 
 ---
 
- In summary: You can use @Bean to make an existing third-party class available 
- to your Spring framework application context.
+### In summary: You can use @Bean to make an existing third-party class available 
+### to your Spring framework application context.
 
 
 
@@ -123,5 +119,3 @@
  beans. For your existing beans in your class you can use component scanning 
  with @Component (also @Controller, @Service, @Repository ...).
  
-
-
