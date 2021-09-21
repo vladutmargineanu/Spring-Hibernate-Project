@@ -1,8 +1,7 @@
  
 # FAQ: What is a real-time use case for @Bean?
 
-## Here is a real-time use case of using @Bean: You can use @Bean to make an existing
-## third-party class available to your Spring framework application context.
+## Here is a real-time use case of using @Bean: You can use @Bean to make an existing third-party class available to your Spring framework application context.
 
  For example, I was recently working on a global real-time project using Amazon Web Services.
  The project made use of the Amazon Simple Storage Service (AWS S3). This is remote service that
@@ -109,8 +108,7 @@
 
 ---
 
-### In summary: You can use @Bean to make an existing third-party class available 
-### to your Spring framework application context.
+### In summary: You can use @Bean to make an existing third-party class available to your Spring framework application context.
 
 
 
