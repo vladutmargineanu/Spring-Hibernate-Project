@@ -172,6 +172,3 @@ The sadFortuneService is then injected into the swim coach instance.
 
 This concludes the line-by-line discussion of the source code. All of the
 behind the scenes work.
-
-# I hope this clears your doubt. :-)
-
