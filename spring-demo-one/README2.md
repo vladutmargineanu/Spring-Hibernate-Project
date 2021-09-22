@@ -9,7 +9,7 @@ Coach theCoach = context.getBean("myCoach", Coach.class);
 
 ---
 
-Answer
+### Answer
 
 When we pass the interface to the method, behind the scenes Spring will cast the object for you.
 ```java
