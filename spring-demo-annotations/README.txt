@@ -1,7 +1,4 @@
-README
---- 
-
-Special Note about Destroy Lifecycle and Prototype Scope
+# Special Note about Destroy Lifecycle and Prototype Scope
 
 ---
 
@@ -33,16 +30,16 @@ This also applies to XML configuration.
 
 ---
 
-QUESTION: How can I create code to call the destroy method on prototype scope beans
-ANSWER:
+## QUESTION: How can I create code to call the destroy method on prototype scope beans
+## ANSWER:
 
 You can destroy prototype beans but custom coding is required. This examples shows how to destroy prototype scoped beans.
 
 This examples shows how to destroy prototype scoped beans. A couple of changes are required
 
-1. Create a custom bean processor. This bean processor will keep track of prototype scoped beans. During shutdown it will call the destroy() method on the prototype scoped beans.
+### 1. Create a custom bean processor. This bean processor will keep track of prototype scoped beans. During shutdown it will call the destroy() method on the prototype scoped beans.
 
-2. The prototype scoped beans MUST implement the DisposableBean interface. This interface defines a "destroy()" method. This method should be used instead of the @PostDestroy annotation.
+### 2. The prototype scoped beans MUST implement the DisposableBean interface. This interface defines a "destroy()" method. This method should be used instead of the @PostDestroy annotation.
 
-3. In this app, AnnotationDemoApp.java is the main program. FootballCoach.java is the prototype scoped bean. FootballCoach implements the DisposableBean interface and provides the destroy() method. The custom bean processing is handled in the MyCustomBeanProcessor class.
+### 3. In this app, AnnotationDemoApp.java is the main program. FootballCoach.java is the prototype scoped bean. FootballCoach implements the DisposableBean interface and provides the destroy() method. The custom bean processing is handled in the MyCustomBeanProcessor class.
 
