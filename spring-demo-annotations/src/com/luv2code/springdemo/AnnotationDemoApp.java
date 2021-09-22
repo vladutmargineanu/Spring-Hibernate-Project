@@ -32,7 +32,7 @@ public class AnnotationDemoApp {
 		System.out.println(swimCoach.getDailyWorkout());
 
 
-		// call method to get the daily fortune
+		// call method to get the daily fortune - Dependency Injection
 		System.out.println(tennisCoach.getDailyFortune());
 		
 		System.out.println(hockeyCoach.getDailyFortune());

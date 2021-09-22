@@ -5,14 +5,16 @@ import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("singleton")		// singleton return a SHARED reference to the SAME bean
 public class HockeyCoach implements Coach {
 	
 	// field injection - without any setter or method
 	@Autowired
-	@Qualifier("randomFortuneService")		// qualifier for dependency injection DI
+	@Qualifier("randomFortuneService")	// qualifier for dependency injection DI
 	private FortuneService fortuneService;
 	
 	// define default constructor
