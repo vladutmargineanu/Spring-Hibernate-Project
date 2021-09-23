@@ -22,4 +22,5 @@ http://localhost:8080/spring-mvc-demo/hello/processForm
 The part in bold with map to the controller with top-level request mapping "/hello" and then map to request mapping in that class "/processForm"
 
 The key here is relative path of showing the form and then submitting to relative path.
+
 ---
