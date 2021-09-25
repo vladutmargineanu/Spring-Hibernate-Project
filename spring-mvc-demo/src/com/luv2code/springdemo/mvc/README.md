@@ -1,5 +1,4 @@
 # FAQ: How does "processForm" work for "/hello"?
-# FAQ: 
 
 ## Question: Can you please clarify how /hello is getting appended to the jsp file action for "processForm"?
 
