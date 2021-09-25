@@ -22,7 +22,7 @@
 		<br>
 		<br>
 
-		<form:select path="country">
+		Country Where Born: <form:select path="countryWhereBorn">
 
 			<form:option value="Romania" />
 			<form:option value="France" />
@@ -34,12 +34,32 @@
 
 		<br>
 		<br>
-		
-		<form:select path="country">
+
+		Country To Study: <form:select path="countryToStudy">
 
 			<form:options items="${student.countryOptions}" />
 
 		</form:select>
+
+		<br>
+		<br>
+		
+		Favorite Language:
+		
+		Java <form:radiobutton path="favoriteLanguage" value="Java" />
+		C# <form:radiobutton path="favoriteLanguage" value="Java" />
+		PHP <form:radiobutton path="favoriteLanguage" value="Java" />
+		Ruby <form:radiobutton path="favoriteLanguage" value="Java" />
+		C++ <form:radiobutton path="favoriteLanguage" value="Java" />
+
+		<br>
+		<br>
+		
+		Operating Systems:
+		
+		Linux <form:checkbox path="operatingSystems" value="Linux" />
+		Mac OS <form:checkbox path="operatingSystems" value="Mac OS" />
+		MS Windows <form:checkbox path="operatingSystems" value="MS Windows" />
 
 		<br>
 		<br>
