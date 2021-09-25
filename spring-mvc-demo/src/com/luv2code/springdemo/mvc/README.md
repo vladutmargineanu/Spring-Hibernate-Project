@@ -115,3 +115,41 @@ public String showForm(Model theModel) {
 7. Remove all references to country option from your Student.java.  
 
 ---
+        
+# FAQ: How to populate radiobuttons with items from Java class?
+# FAQ: How to populate radiobuttons with items from Java class like we did with selectlist?
+
+## You can follow a similar approach that we used for the drop-down list.
+
+### Here are the steps
+
+1. Set up the data in your Student class
+
+Add a new field
+```java
+    private LinkedHashMap<String, String> favoriteLanguageOptions;
+In your constructor, populate the data
+
+        // populate favorite language options
+        favoriteLanguageOptions = new LinkedHashMap<>();
+        // parameter order: value, display label
+        //
+        favoriteLanguageOptions.put("Java", "Java");
+        favoriteLanguageOptions.put("C#", "C#");
+        favoriteLanguageOptions.put("PHP", "PHP");
+        favoriteLanguageOptions.put("Ruby", "Ruby");    
+  ```  
+
+Add getter method
+```java
+    public LinkedHashMap<String, String> getFavoriteLanguageOptions() {
+        return favoriteLanguageOptions;
+    }
+```
+2. Reference the data in your form
+```xml
+        Favorite Language:
+        
+        <form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguageOptions}"  />
+```
+--- 
