@@ -260,6 +260,8 @@ public class Customer {
 
 If the user enters String input such as "abcde" for the Free Passes integer field, we'd like to give a descriptive error message.
 
+        ![image](https://user-images.githubusercontent.com/48476504/134826530-27783ad1-bc40-4d67-b84b-5ac697639b56.png)
+
 
 We basically need to override the default Spring MVC validation messages.
 
@@ -272,6 +274,8 @@ Follow these steps.
 3. Right-click the resources sub-directory and create a new file named: messages.properties
 
 Your directory structure should look like this:
+
+        ![image](https://user-images.githubusercontent.com/48476504/134826532-e26f99b2-2a57-44d9-b020-99e4c95c3080.png)
 
 
 4. Add the following entry to the messages.properties file
@@ -315,6 +319,8 @@ Add the following:
 7. Save the file. Restart the Tomcat server
 
 8. Run your app and add bad data for the "Free Passes" field. You will see the error message from our properties file.
+
+        ![image](https://user-images.githubusercontent.com/48476504/134826537-374ac1cf-5471-48de-8c31-ab88b869b420.png)
 
 --- 
        
