@@ -153,3 +153,168 @@ Add getter method
         <form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguageOptions}"  />
 ```
 --- 
+    
+# FAQ: How to make Integer field required and handle Strings: freePasses
+# FAQ: How to Make Integer field required and handle Strings: freePasses?
+
+## Question:
+
+I am getting the following error when i submit the form with an empty value for customer "freePasses". I am  using @NotNull on the field "freePasses". It is not throwing "is required" after validation after submit.
+
+How to fix this?
+
+Also, how do I handle validation if the user enters String input for the integer field?
+
+-----
+
+### Answer:
+
+The root cause is the freePasses field is using a primitive type: int. In order to check for null we must use the appropriate wrapper class: Integer.
+
+To resolve this, In Customer.java, replace "int" with "Integer"
+```java
+@NotNull(message="is required")     
+@Min(value=0, message="must be greater than or equal to zero")     
+@Max(value=10, message="must be less than or equal to 10")     
+private Integer freePasses;
+
+Then update your getter/setter methods to use "Integer"
+
+    public Integer getFreePasses() {
+        return freePasses;
+    }
+
+    public void setFreePasses(Integer freePasses) {
+        this.freePasses = freePasses;
+    }
+```
+Save everything and retest.
+
+
+
+=====
+
+Here is the full source code.
+```java
+package com.luv2code.springdemo.mvc;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+ 
+public class Customer {
+ 
+    private String firstName;
+    
+    @NotNull(message="is required")
+    @Size(min=1, message="is required")
+    private String lastName;
+ 
+    @NotNull(message="is required")
+    @Min(value=0, message="must be greater than or equal to zero")
+    @Max(value=10, message="must be less than or equal to 10")
+    private Integer freePasses;
+    
+    @Pattern(regexp="^[a-zA-Z0-9]{5}", message="only 5 chars/digits")
+    private String postalCode;
+        
+ 
+    public String getPostalCode() {
+        return postalCode;
+    }
+ 
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+ 
+    public String getFirstName() {
+        return firstName;
+    }
+ 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+ 
+    public String getLastName() {
+        return lastName;
+    }
+ 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+ 
+    public Integer getFreePasses() {
+        return freePasses;
+    }
+ 
+    public void setFreePasses(Integer freePasses) {
+        this.freePasses = freePasses;
+    }    
+    
+}
+```
+====
+
+## Handle String Input for Integer Fields
+
+If the user enters String input such as "abcde" for the Free Passes integer field, we'd like to give a descriptive error message.
+
+
+We basically need to override the default Spring MVC validation messages.
+
+Follow these steps.
+
+1. In your Eclipse project, expand the node: Java Resources
+
+2. Right-click the src directory and create a new sub-directory: resources
+
+3. Right-click the resources sub-directory and create a new file named: messages.properties
+
+Your directory structure should look like this:
+
+
+4. Add the following entry to the messages.properties file
+
+typeMismatch.customer.freePasses=Invalid number
+
+5. Save file
+
+---
+
+This file contains key/value pairs for the error message type
+
+For a basic example:
+```xml
+  typeMismatch.customer.freePasses=Invalid number
+```
+### The format of the error key is:   code + "." + object name + "." + field
+
+To find out the given error code, in your Spring controller, you can log the details of the binding result
+```java
+ System.out.println("Binding result: " + theBindingResult);   
+```
+
+For details, see the docs here 
+
+- http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/validation/DefaultMessageCodesResolver.html
+
+---
+
+6. Edit your config file: WEB-INF/spring-mvc-demo-servlet.xml
+
+Add the following:
+```xml
+<bean id="messageSource" 
+      class="org.springframework.context.support.ResourceBundleMessageSource">
+ 
+    <property name="basenames" value="resources/messages" />
+ 
+</bean>
+```
+7. Save the file. Restart the Tomcat server
+
+8. Run your app and add bad data for the "Free Passes" field. You will see the error message from our properties file.
+
+--- 
+        
