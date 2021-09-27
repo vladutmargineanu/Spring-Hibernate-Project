@@ -157,3 +157,20 @@ Note, if you are using Maven then you can add this to your POM file
 </dependency>
 ```
 ---
+    
+# FAQ: Why we are using JPA Annotation instead of Hibernate?
+# FAQ: Why we are using JPA Annotation instead of Hibernate ?
+
+
+
+## QUESTION: Why we are using JPA Annotation instead of Hibernate ?
+
+For example, why we are not using this org.hibernate.annotations.Entity?
+
+### ANSWER:
+JPA is a standard specification. Hibernate is an implementation of the JPA specification.
+
+Hibernate implements all of the JPA annotations.
+
+The Hibernate team recommends the use of JPA annotations as a best practice.
+---
