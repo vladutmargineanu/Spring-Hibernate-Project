@@ -174,3 +174,13 @@ Hibernate implements all of the JPA annotations.
 
 The Hibernate team recommends the use of JPA annotations as a best practice.
 ---
+
+
+# FAQ: Can Hibernate generate database tables based on the Java code?
+## Answer: Yes, you can generate database tables from Java code. Here's a tutorial that shows you how.
+
+Generate Tables from Entity classes in Hibernate: 
+```
+    https://www.dineshonjava.com/hibernate/hbm2ddl-configuration-and-name/
+```
+---
