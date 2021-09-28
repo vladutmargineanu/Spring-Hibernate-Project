@@ -1,0 +1,1 @@
+SELECT * FROM hb_student_tracker.student;
