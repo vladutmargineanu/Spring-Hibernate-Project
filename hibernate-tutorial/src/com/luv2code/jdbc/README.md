@@ -75,6 +75,7 @@ log4j.appender.stdout.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1
 log4j.logger.org.hibernate=TRACE
 ```
 2b. Save this file as "log4j.properties" in your “src” directory
+
 ![image](https://user-images.githubusercontent.com/48476504/135163759-8be8d68d-c8c8-4287-9999-f69f9a19a786.png)
 
 
@@ -97,6 +98,7 @@ or search for: extracted value
 (the search string changes depending on which version of Hibernate you are using)
 
 You will see the logs with the real parameter values. Congrats!
+
 ![image](https://user-images.githubusercontent.com/48476504/135163793-e2590562-0593-407d-aa3c-744107612616.png)
 
 ---
