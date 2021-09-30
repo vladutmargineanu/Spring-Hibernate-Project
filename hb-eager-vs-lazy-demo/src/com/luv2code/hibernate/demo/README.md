@@ -1,7 +1,7 @@
 # FAQ: How to load the courses at a later time in the application?
 # FAQ: How load the courses at a later time in the application?
 
-## Question - I've watched your 2 solutions for loading related data after session closing. Both, either getting related courses before closing session and using JOIN FETCH seem to be negating of lazy loading (using those solutions we completely resign of lazy loading.
+## Question - 2 solutions for loading related data after session closing (1 - call getter method while session is open and 2 - HQL - Hibernate query - Join Fetch). Both, either getting related courses before closing session and using JOIN FETCH seem to be negating of lazy loading (using those solutions we completely resign of lazy loading).
 
 Is there any good solution to load these data somewhere else in the app? Should I open new session?
 
