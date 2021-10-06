@@ -211,17 +211,22 @@ We can do a similar thing for last name and email.
 				<!-- construct a sort link for email -->
 				<c:url var="sortLinkEmail" value="/customer/list">
 					<c:param name="sort" value="<%= Integer.toString(SortUtils.EMAIL) %>" />
-				</c:url>					
+				</c:url>				
 ```
 
-Then for the column headings, we set up the <a href> using the the appropriate link.
+Then for the column headings, we set up the:
+```html
+<a href>
+```
+using the appropriate link.
+	
 ```xml
-				<tr>
-					<th><a href="${sortLinkFirstName}">First Name</a></th>
-					<th><a href="${sortLinkLastName}">Last Name</a></th>
-					<th><a href="${sortLinkEmail}">Email</a></th>
-					<th>Action</th>
-				</tr>
+	<tr>
+		<th><a href="${sortLinkFirstName}">First Name</a></th>
+		<th><a href="${sortLinkLastName}">Last Name</a></th>
+		<th><a href="${sortLinkEmail}">Email</a></th>
+		<th>Action</th>
+	</tr>
 ```
 
 This provides the clickable links on the page as shown below.
@@ -331,13 +336,13 @@ import com.luv2code.springdemo.util.SortUtils;
 public interface CustomerDAO {
  
 	public List<Customer> getCustomers(int theSortField);
-	...
 }
 ```
 
 In the CustomerDAOImpl.java, the getCustomers(...) method has theSortField parameter. It will determine the sort field name based on the parameter.
 
 File: CustomerDAOImpl.java
+	
 ```java
 package com.luv2code.springdemo.dao;
  
