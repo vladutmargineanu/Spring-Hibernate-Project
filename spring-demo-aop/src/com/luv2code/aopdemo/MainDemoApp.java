@@ -21,15 +21,23 @@ public class MainDemoApp {
 		// call the business method
 		theAccountDAO.addAccount();
 		
+		// call the business method with one param
+		Account myAccount = new Account();
+		theAccountDAO.addAccount(myAccount);
+		
+		// call the business method with two param
+		theAccountDAO.addAccount(myAccount, true);
+		theAccountDAO.doWork();
+		
 		// call the membership business method
 		theMembershipDAO.addSillyMember();
 		
 		// call the membership business method
 		theMembershipDAO.addSillyMember1();
+		theMembershipDAO.goToSleep();
 		
 		// call the business method again
-		System.out.println("\n Let's call it again!\n");
-		theAccountDAO.addAccount();
+ 		theAccountDAO.addAccount();
 
 		// close the context
 		context.close();
