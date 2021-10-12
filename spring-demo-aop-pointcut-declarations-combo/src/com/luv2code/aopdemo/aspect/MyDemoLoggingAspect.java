@@ -48,6 +48,5 @@ public class MyDemoLoggingAspect {
 	public void performApiAnalytics() {
 		
 		System.out.println("\n======>>> Performing API analytics");
-		s
 	}
 }
