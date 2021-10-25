@@ -32,13 +32,13 @@ public class CRMLoggingAspect {
 
 	}
 
-	@Pointcut("forControllerPackage || forServicePackage || forDaoPackage")
+	@Pointcut("forControllerPackage() || forServicePackage() || forDaoPackage()")
 	private void forAppFlow() {
 
 	}
 
 	// add @Before advice
-	@Before("forAppFlow")
+	@Before("forAppFlow()")
 	public void before(JoinPoint theJoinPoint) {
 
 		// display method we are calling
