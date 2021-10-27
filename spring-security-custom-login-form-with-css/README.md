@@ -19,10 +19,6 @@ You are correct, by default Spring Security will block all requests to the web a
 
 
 
-Full Source code available here: spring-security-custom-login-form-with-css.zip
-
-
-
 Here are the details of each step.
 
 
