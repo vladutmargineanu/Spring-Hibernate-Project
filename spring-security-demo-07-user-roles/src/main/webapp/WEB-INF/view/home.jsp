@@ -27,6 +27,26 @@
 		<security:authentication property="principal.authorities" />
 	</p>
 
+	<!-- Add a link to point to /leaders  -> this is for managers -->
+
+	<security:authorize access="hasRole('MANAGER')">
+		<p>
+			<a href="${ pageContext.request.contextPath }/leaders">LeaderShip
+				Meeting</a> (Only for Manager people)
+		</p>
+	</security:authorize>
+
+
+	<!-- Add a link to point to /systems  -> this is for admins -->
+
+	<security:authorize access="hasRole('ADMIN')">
+		<p>
+			<a href="${ pageContext.request.contextPath }/systems">IT Systems
+				Meeting </a> (Only for Admin people)
+
+		</p>
+	</security:authorize>
+
 	<hr>
 
 	<!-- - Add a logout button -->
