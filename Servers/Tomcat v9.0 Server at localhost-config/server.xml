@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="spring-crm-rest-demo-01-overview" path="/spring-crm-rest-demo-01-overview" reloadable="true" source="org.eclipse.jst.jee.server:spring-crm-rest-demo-01-overview"/></Host>
+      <Context docBase="spring-crm-rest-demo-03-exception-handling" path="/spring-crm-rest-demo-03-exception-handling" reloadable="true" source="org.eclipse.jst.jee.server:spring-crm-rest-demo-03-exception-handling"/></Host>
     </Engine>
   </Service>
 </Server>
