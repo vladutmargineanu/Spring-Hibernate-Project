@@ -3,6 +3,15 @@
 
 Spring Security version of the Thymeleaf Employee Directory application. This version makes use of JDBC Authentication with encrypted passwords.
 
+Here are code examples of Spring Security login/logout. I've extended the Employee Directory example with Spring Security.
+
+![image](https://user-images.githubusercontent.com/48476504/142428958-ae980278-c70e-4bc8-8cdb-2bbcb0ae016a.png)
+
+
+![image](https://user-images.githubusercontent.com/48476504/142428964-2c6dfa38-a83c-4baf-9181-a1f2f7fdc64e.png)
+
+
+
 For docs on Spring Security and Thymeleaf integration, see this link
 - https://www.thymeleaf.org/doc/articles/springsecurity.html
 
