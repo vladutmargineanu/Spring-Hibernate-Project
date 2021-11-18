@@ -1,4 +1,4 @@
-SPRING BOOT, SPRING SECURITY AND THYMELEAF
+# SPRING BOOT, SPRING SECURITY AND THYMELEAF
 ==========================================
 
 A student asked for a Spring Security version of the Thymeleaf Employee Directory application. This version makes use of JDBC Authentication with encrypted passwords.
@@ -13,7 +13,7 @@ These are the same SQL scripts used in the course.
 - employee.sql: Creates the employee table and loads sample data
 
 - setup-spring-security-bcrypt-demo-database.sql: Creates login accounts with encrypted passwords
-
+```
 +---------+----------+-----------------------------+
 | user id | password |            roles            |
 +---------+----------+-----------------------------+
@@ -22,27 +22,27 @@ These are the same SQL scripts used in the course.
 | susan   | fun123   | ROLE_EMPLOYEE, ROLE_ADMIN   |
 +---------+----------+-----------------------------+
 
-
+```
 
 MAVEN PROJECT UPDATES
 =====================
 We need to add entries for Spring Security and Thymeleaf Security
 
 1. Add Spring Security starter
-
+```xml
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-
+```
 
 2. Add the Thymeleaf pom entries for Spring Security
-
+```xml
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
 		</dependency>
-
+```
 
 CREATE BEANS FOR DATABASE ACCESS
 ================================
@@ -54,33 +54,33 @@ This Spring Boot project will make use of two different datasources
 3. The database configs are in the file: application.properties
 
 For the main application, these are the database connection properties
-
+```xml
 #
 # JDBC properties
 #
 app.datasource.jdbc-url=jdbc:mysql://localhost:3306/employee_directory?useSSL=false&serverTimezone=UTC
 app.datasource.username=springstudent
 app.datasource.password=springstudent
-
+```
 
 For the JPA configuration, the file has the following
-
+```xml
 # Spring Data JPA properties
 spring.data.jpa.repository.packages=com.luv2code.springboot.thymeleafdemo.dao
 spring.data.jpa.entity.packages-to-scan=com.luv2code.springboot.thymeleafdemo.entity
-
+```
 For the Security database, the file has the following
-
+```xml
 #
 # SECURITY JDBC properties
 #
 security.datasource.jdbc-url=jdbc:mysql://localhost:3306/spring_security_demo_bcrypt?useSSL=false&serverTimezone=UTC
 security.datasource.username=springstudent
 security.datasource.password=springstudent
-
+```
 
 4. The datasources are configured in the file: DemoDataSourceConfig.java
-
+```java
 @Configuration
 @EnableJpaRepositories(basePackages={"${spring.data.jpa.repository.packages}"})
 public class DemoDataSourceConfig {
@@ -106,12 +106,13 @@ public class DemoDataSourceConfig {
 		return DataSourceBuilder.create().build();
 	}
 }
-
+```
 Let's explain what's going on in this file.
 
 a. Configure Spring Data JPA
+```java
 @EnableJpaRepositories(basePackages={"${spring.data.jpa.repository.packages}"})
-
+```
 This tells the app that we are using JPA repositories defined in the given package. The package name is read from the application.properties file.
 
 spring.data.jpa.repository.packages=com.luv2code.springboot.thymeleafdemo.dao
@@ -120,26 +121,26 @@ In this case, the package name is: com.luv2code.springboot.thymeleafdemo.dao, so
 By default it will use a bean named, "entityManagerFactory". We manually configure this bean in this class. Also, by default, Spring Data JPA will use a bean named "transactionManager". The "transactionManager" bean is autoconfigured by Spring Boot.
 
 b. Configure application DataSource
-
+```java
 	@Primary
 	@Bean
 	@ConfigurationProperties(prefix="app.datasource")
 	public DataSource appDataSource() {
 		return DataSourceBuilder.create().build();
 	}
-
+```
 This code creates a datasource. This datasource is for our main application data. It will read data "employee" data from the database. This datasource is configured with the following:
-
+```java
 	@ConfigurationProperties(prefix="app.datasource")
-
+```
 The @ConfigurationProperties will read properties from the config file (application.properties). It will read the properties from the file with the prefix: "app.datasource". So it will read the following:
-
+```xml
 app.datasource.jdbc-url=jdbc:mysql://localhost:3306/employee_directory?useSSL=false&serverTimezone=UTC
 app.datasource.username=springstudent
 app.datasource.password=springstudent
-
+```
 c. Configure EntityManagerFactory
-
+```java
 	@Bean
 	@ConfigurationProperties(prefix="spring.data.jpa.entity")
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory(EntityManagerFactoryBuilder builder, DataSource appDataSource) {
@@ -147,27 +148,27 @@ c. Configure EntityManagerFactory
 				.dataSource(appDataSource)
 				.build();
 	}
-
+```
 The entity manager factory tells Spring Data JPA which packages to scan for JPA entities. The @ConfigurationProperties will read properties from the config file (application.properties). It will read the properties from the file with the prefix: "spring.data.jpa.entity". So it will read the following:
 
 spring.data.jpa.entity.packages-to-scan=com.luv2code.springboot.thymeleafdemo.entity
 
 d. Configure Data Source for Security
-
+```java
 	@Bean
 	@ConfigurationProperties(prefix="security.datasource")
 	public DataSource securityDataSource() {
 		return DataSourceBuilder.create().build();
 	}
-
+```
 Here we configure the datasource to access the security database. By default, Spring Security makes use of regular JDBC (no JPA). As a result, we only need a datasource so the configuration is a bit simpler.
 
 The @ConfigurationProperties will read properties from the config file (application.properties). It will read the properties from the file with the prefix: "security.datasource". So it will read the following:
-
+```xml
 security.datasource.jdbc-url=jdbc:mysql://localhost:3306/spring_security_demo_bcrypt?useSSL=false&serverTimezone=UTC
 security.datasource.username=springstudent
 security.datasource.password=springstudent
-
+```
 
 CONFIGURE SPRING SECURITY FOR DATABASE AUTHENTICATION
 =====================================================
@@ -177,7 +178,7 @@ Now that we have the Spring Security datasource set up, we need to use this data
 1. Update Spring Security Configuration
 
 Update the file: DemoSecurityConfig.java to use this
-
+```java
 @Configuration
 @EnableWebSecurity
 public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -198,7 +199,7 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	...
 }
-
+```
 This injects the "securityDataSource" bean that was defined in the previous file: DemoDataSourceConfig.java. Then in the configure() method, we tell Spring Security to use this data source for JDBC authentication.
 
 
@@ -213,7 +214,7 @@ In the application, we want to display content based on user role.
 - Admin role: users in this role will be allowed to list, add, update and delete employees. 
 
 These restrictions are currently in place with the code: DemoSecurityConfig.java
-
+```java
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
@@ -234,7 +235,7 @@ These restrictions are currently in place with the code: DemoSecurityConfig.java
 			.exceptionHandling().accessDeniedPage("/access-denied");
 		
 	}
-
+```
 We also, want to hide/display the links on the view page. For example, if the user has only the "EMPLOYEE" role, then we should only display links available for "EMPLOYEE" role.
 Links for "MANAGER" and "ADMIN" role should not be displayed for the "EMPLOYEE".
 
@@ -245,17 +246,17 @@ We can make use of Thymeleaf Security to handle this for us.
 To use the Thymeleaf Security, we need to add the following to the XML Namespace
 
 File: list-employees.html
-
+```html
 <html lang="en" 
 		xmlns:th="http://www.thymeleaf.org"
 		xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
-
+```
 Note the reference for xmlns:sec
 
 
 2. "Update" button
 Only display the "Update" button for users with role of MANAGER OR ADMIN
-
+```html
 					<div sec:authorize="hasAnyRole('ROLE_MANAGER', 'ROLE_ADMIN')">
 
 						<!-- Add "update" button/link -->
@@ -265,11 +266,11 @@ Only display the "Update" button for users with role of MANAGER OR ADMIN
 						</a>
 
 					</div>					
-
+```
 3. "Delete" buton
 
 Only display the "Delete" button for users with role of ADMIN
-
+```html
 					<div sec:authorize="hasRole('ROLE_ADMIN')">  
 					
 						<!-- Add "delete" button/link -->					
@@ -281,7 +282,7 @@ Only display the "Delete" button for users with role of ADMIN
 
 					</div>
 
-					
+```					
 
 TEST THE APPLICATION
 ====================
@@ -293,15 +294,18 @@ TEST THE APPLICATION
 
 3. Log in using one of the accounts
 
-+---------+----------+-----------------------------+
-| user id | password |            roles            |
-+---------+----------+-----------------------------+
-| john    | fun123   | ROLE_EMPLOYEE               |
-| mary    | fun123   | ROLE_EMPLOYEE, ROLE_MANAGER |
-| susan   | fun123   | ROLE_EMPLOYEE, ROLE_ADMIN   |
-+---------+----------+-----------------------------+
-
+```
+	+---------+----------+-----------------------------+
+	| user id | password |            roles            |
+	+---------+----------+-----------------------------+
+	| john    | fun123   | ROLE_EMPLOYEE               |
+	| mary    | fun123   | ROLE_EMPLOYEE, ROLE_MANAGER |
+	| susan   | fun123   | ROLE_EMPLOYEE, ROLE_ADMIN   |
+	+---------+----------+-----------------------------+
+```
 4. Confirm that you can login and access data based on the roles.
 
 Congratulations! You have an app that uses Spring Boot, Spring Security (JDBC), Thymeleaf, Spring Data JPA
+
+---
  					
