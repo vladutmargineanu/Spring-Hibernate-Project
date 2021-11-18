@@ -110,9 +110,9 @@ public class DemowebApplication extends SpringBootServletInitializer {
 2. Update Maven POM file
 
 Update your POM.xml to use WAR packaging
-
+```
 <packaging>war</packaging>
-
+```
 In POM.xml, add dependency to be able to compile JSPs
 ```xml
 <dependency>
